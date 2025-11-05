@@ -40,7 +40,7 @@ async function connectToDatabase() {
         console.log('✅ Conectado ao MongoDB Atlas!');
 
         // Pega o banco de dados
-        const db = client.db('cuidar-pt'); // Nome do banco
+        const db = client.db('novoamanhecer'); // Nome do banco
 
         // Armazena em cache
         cachedDb = db;
