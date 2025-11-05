@@ -1,7 +1,7 @@
 {
-  "name": "cuidar-pt-api",
+  "name": "novo-amanhecer-api",
   "version": "1.0.0",
-  "description": "API Serverless do Cuidar.pt para Vercel com MongoDB Atlas",
+  "description": "API Serverless do Novo Amanhecer para Vercel com MongoDB Atlas",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -9,8 +9,8 @@
     "test": "node index.js",
     "update": "npm update && npm audit fix"
   },
-  "keywords": ["cuidar", "vercel", "serverless", "mongodb"],
-  "author": "Cuidar.pt",
+  "keywords": ["novoamanhecer", "cuidadores", "vercel", "serverless", "mongodb"],
+  "author": "Novo Amanhecer",
   "license": "ISC",
   "dependencies": {
     "mongodb": "^6.20.0",
@@ -18,6 +18,6 @@
     "dotenv": "^16.4.5"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "20.x"
   }
 }
