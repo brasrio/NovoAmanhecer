@@ -1,0 +1,19 @@
+{
+  "name": "novo-amanhecer",
+  "version": "1.0.0",
+  "description": "Plataforma para conectar famílias a cuidadores qualificados",
+  "scripts": {
+    "start": "cd api && node index.js",
+    "dev": "cd api && node index.js",
+    "install-deps": "cd api && npm install"
+  },
+  "keywords": [
+    "cuidadores",
+    "enfermeiros",
+    "saúde",
+    "plataforma"
+  ],
+  "author": "Novo Amanhecer",
+  "license": "ISC"
+}
+

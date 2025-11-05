@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cuidar.pt</title>
+    <meta name="description" content="Faça login na plataforma Cuidar.pt">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/images/logo.svg" alt="Cuidar.pt Logo" class="navbar-logo">
+                <span class="navbar-title">Cuidar.pt</span>
+            </a>
+            
+            <button class="navbar-toggle" aria-label="Menu">
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            
+            <ul class="navbar-menu">
+                <li><a href="index.html#como-funciona" class="navbar-link">Como Funciona</a></li>
+                <li><a href="index.html#servicos" class="navbar-link">Serviços</a></li>
+                <li><a href="index.html#sobre" class="navbar-link">Sobre</a></li>
+                <li><a href="cadastro.html" class="btn btn-nav-primary">Cadastrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section class="cadastro-section">
+        <div class="container">
+            <div class="cadastro-container" style="max-width: 500px; grid-template-columns: 1fr;">
+                <div class="cadastro-form-container">
+                    <div class="cadastro-form-header" style="text-align: center;">
+                        <img src="assets/images/logo.svg" alt="Cuidar.pt" style="width: 4rem; height: 4rem; margin-bottom: 1.5rem;">
+                        <h2 class="cadastro-form-title">Bem-vindo de Volta!</h2>
+                        <p class="cadastro-form-subtitle">Entre com suas credenciais</p>
+                    </div>
+
+                    <div id="alertMessage" class="alert" style="display: none;"></div>
+
+                    <form id="loginForm" class="cadastro-form">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="seu@email.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senha" class="form-label">Senha *</label>
+                            <input 
+                                type="password" 
+                                id="senha" 
+                                name="senha" 
+                                class="form-input" 
+                                placeholder="Digite sua senha"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="lembrar" name="lembrar">
+                            <label for="lembrar">Lembrar de mim</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit">
+                            <span class="btn-text">Entrar</span>
+                        </button>
+                    </form>
+
+                    <div class="cadastro-footer">
+                        <p><a href="#" class="link">Esqueci minha senha</a></p>
+                        <p style="margin-top: 1rem;">Não tem uma conta? <a href="cadastro.html" class="link">Cadastre-se</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
+

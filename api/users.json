@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": "admin-richard",
+      "nome": "Richard",
+      "email": "richard@admin.com",
+      "telefone": "+351000000001",
+      "distrito": "Lisboa",
+      "cidade": "Lisboa",
+      "userType": "admin",
+      "role": "admin",
+      "senha": "dido",
+      "isActive": true,
+      "createdAt": "2024-10-30T00:00:00.000Z",
+      "updatedAt": "2024-10-30T00:00:00.000Z"
+    },
+    {
+      "id": "admin-babi",
+      "nome": "Babi",
+      "email": "babi@admin.com",
+      "telefone": "+351000000002",
+      "distrito": "Lisboa",
+      "cidade": "Lisboa",
+      "userType": "admin",
+      "role": "admin",
+      "senha": "babi",
+      "isActive": true,
+      "createdAt": "2024-10-30T00:00:00.000Z",
+      "updatedAt": "2024-10-30T00:00:00.000Z"
+    },
+    {
+      "id": "1762366243988",
+      "nome": "richard",
+      "email": "didoteste199@gmail.com",
+      "telefone": "+351993224864",
+      "distrito": "Aveiro",
+      "cidade": "Aveiro",
+      "userType": "familia",
+      "senha": "kJSnoXve6h!&",
+      "role": "cliente",
+      "isActive": true
+    },
+    {
+      "id": "1762368203490",
+      "nome": "Renata Auricchio",
+      "email": "renataauricchio1@gmail.com",
+      "telefone": "+351980403058",
+      "distrito": "Setúbal",
+      "cidade": "Sesimbra",
+      "userType": "familia",
+      "senha": "Hbv9$CMb7DUc",
+      "role": "cliente",
+      "isActive": true
+    }
+  ]
+}

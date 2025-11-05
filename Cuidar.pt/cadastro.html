@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Cuidar.pt</title>
+    <meta name="description" content="Cadastre-se na plataforma Cuidar.pt e comece a encontrar cuidadores ou oferecer seus serviços.">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/images/logo.svg" alt="Cuidar.pt Logo" class="navbar-logo">
+                <span class="navbar-title">Cuidar.pt</span>
+            </a>
+            
+            <button class="navbar-toggle" aria-label="Menu">
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            
+            <ul class="navbar-menu">
+                <li><a href="index.html#como-funciona" class="navbar-link">Como Funciona</a></li>
+                <li><a href="index.html#servicos" class="navbar-link">Serviços</a></li>
+                <li><a href="index.html#sobre" class="navbar-link">Sobre</a></li>
+                <li><a href="login.html" class="navbar-link">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cadastro Section -->
+    <section class="cadastro-section">
+        <div class="container">
+            <div class="cadastro-container">
+                <!-- Lado Esquerdo - Informações -->
+                <div class="cadastro-info">
+                    <div class="cadastro-info-content">
+                        <img src="assets/images/logo.svg" alt="Cuidar.pt" class="cadastro-logo">
+                        <h1 class="cadastro-info-title">Bem-vindo ao <span class="gradient-text">Cuidar.pt</span></h1>
+                        <p class="cadastro-info-description">
+                            Junte-se à nossa comunidade e faça parte da transformação nos cuidados domiciliários.
+                        </p>
+                        
+                        <div class="cadastro-benefits">
+                            <div class="benefit-item">
+                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Cadastro rápido e fácil</span>
+                            </div>
+                            <div class="benefit-item">
+                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span>Plataforma segura e verificada</span>
+                            </div>
+                            <div class="benefit-item">
+                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
+                                <span>Suporte 24/7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lado Direito - Formulário -->
+                <div class="cadastro-form-container">
+                    <div class="cadastro-form-header">
+                        <h2 class="cadastro-form-title">Criar Conta</h2>
+                        <p class="cadastro-form-subtitle">Preencha seus dados para começar</p>
+                    </div>
+
+                    <!-- Alert de Sucesso/Erro -->
+                    <div id="alertMessage" class="alert" style="display: none;"></div>
+
+                    <!-- Seleção de Tipo de Usuário -->
+                    <div class="user-type-selector">
+                        <button type="button" class="user-type-btn active" data-type="familia">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            <span>Busco Cuidador</span>
+                        </button>
+                        <button type="button" class="user-type-btn" data-type="cuidador">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="8.5" cy="7" r="4"></circle>
+                                <polyline points="17 11 19 13 23 9"></polyline>
+                            </svg>
+                            <span>Sou Cuidador</span>
+                        </button>
+                    </div>
+
+                    <!-- Formulário -->
+                    <form id="cadastroForm" class="cadastro-form">
+                        <input type="hidden" id="userType" name="userType" value="familia">
+
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome Completo *</label>
+                            <input 
+                                type="text" 
+                                id="nome" 
+                                name="nome" 
+                                class="form-input" 
+                                placeholder="Digite seu nome completo"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="seu@email.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone" class="form-label">Telefone * </label>
+                            <input 
+                                type="tel" 
+                                id="telefone" 
+                                name="telefone" 
+                                class="form-input" 
+                                placeholder="912345678"
+                                maxlength="15"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="distrito" class="form-label">Distrito *</label>
+                            <select 
+                                id="distrito" 
+                                name="distrito" 
+                                class="form-input" 
+                                required
+                            >
+                                <option value="">Selecione o distrito</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade" class="form-label">Cidade/Concelho *</label>
+                            <select 
+                                id="cidade" 
+                                name="cidade" 
+                                class="form-input" 
+                                disabled
+                                required
+                            >
+                                <option value="">Selecione primeiro o distrito</option>
+                            </select>
+                        </div>
+
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="termos" name="termos" required>
+                            <label for="termos">
+                                Aceito os <a href="#" class="link">Termos de Uso</a> e 
+                                <a href="#" class="link">Política de Privacidade</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit" id="submitBtn">
+                            <span class="btn-text">Criar Minha Conta</span>
+                            <span class="btn-loader" style="display: none;">
+                                <svg class="spinner" viewBox="0 0 50 50">
+                                    <circle class="spinner-path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+                                </svg>
+                            </span>
+                        </button>
+                    </form>
+
+                    <div class="cadastro-footer">
+                        <p>Já tem uma conta? <a href="login.html" class="link">Fazer Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/localizacoes-portugal.js"></script>
+    <script src="assets/js/validacao-telefone.js"></script>
+    <script src="assets/js/cadastro.js"></script>
+</body>
+</html>
+

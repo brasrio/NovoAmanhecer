@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil Profissional - Cuidar.pt</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/perfil-cuidador.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/images/logo.svg" alt="Cuidar.pt Logo" class="navbar-logo">
+                <span class="navbar-title">Cuidar.pt</span>
+            </a>
+            
+            <button class="navbar-toggle" aria-label="Menu">
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            
+            <ul class="navbar-menu">
+                <li><a href="dashboard.html" class="navbar-link">Dashboard</a></li>
+                <li><a href="perfil-cuidador.html" class="navbar-link">Meu Perfil</a></li>
+                <li><button onclick="logout()" class="btn-logout" style="border: none;">Sair</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Perfil Content -->
+    <section class="dashboard">
+        <div class="perfil-container">
+            <div class="perfil-header">
+                <h1>👨‍⚕️ Meu Perfil Profissional</h1>
+                <p>Complete suas informações para que famílias possam encontrá-lo</p>
+            </div>
+            
+            <div id="alertMessage" class="alert"></div>
+            
+            <!-- Foto de Perfil -->
+            <div class="foto-perfil-section">
+                <h2>📸 Foto de Perfil</h2>
+                <div class="foto-preview" id="fotoPreview">
+                    👤
+                </div>
+                <div class="upload-btn">
+                    <label for="fotoPerfil">📷 Escolher Foto</label>
+                    <input type="file" id="fotoPerfil" accept="image/*">
+                </div>
+                <p style="margin-top: 1rem; color: #5a7184; font-size: 0.875rem;">
+                    Formatos aceitos: JPG, PNG (máx. 2MB)
+                </p>
+            </div>
+            
+            <form id="perfilForm">
+                <!-- Informações Profissionais -->
+                <div class="form-section">
+                    <h2>💼 Informações Profissionais</h2>
+                    
+                    <div class="form-group">
+                        <label for="descricao">Sobre Você</label>
+                        <textarea 
+                            id="descricao" 
+                            placeholder="Conte um pouco sobre sua experiência e especialidades..."
+                            maxlength="500"
+                        ></textarea>
+                        <small>Máximo 500 caracteres</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experiencia">Anos de Experiência</label>
+                        <input 
+                            type="number" 
+                            id="experiencia" 
+                            min="0" 
+                            max="50"
+                            placeholder="Ex: 5"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="valorHora">Valor por Hora (€)</label>
+                        <input 
+                            type="number" 
+                            id="valorHora" 
+                            min="0" 
+                            step="0.50"
+                            placeholder="Ex: 15.00"
+                        >
+                        <small>Valor em euros (€)</small>
+                    </div>
+                </div>
+                
+                <!-- Áreas de Atuação -->
+                <div class="form-section">
+                    <h2>📍 Áreas de Atuação</h2>
+                    <p style="color: #5a7184; margin-bottom: 1rem;">
+                        Selecione as cidades/regiões onde você pode trabalhar:
+                    </p>
+                    
+                    <div class="checkbox-group" id="areasAtuacao">
+                        <!-- Será preenchido por JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Qualificações -->
+                <div class="form-section">
+                    <h2>🎓 Qualificações e Especialidades</h2>
+                    
+                    <div class="form-group">
+                        <label for="novaQualificacao">Adicionar Qualificação</label>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <input 
+                                type="text" 
+                                id="novaQualificacao" 
+                                placeholder="Ex: Enfermagem, Primeiros Socorros..."
+                            >
+                            <button type="button" class="btn btn-primary" onclick="adicionarQualificacao()">
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="qualificacoes-tags" id="qualificacoesList">
+                        <!-- Tags serão adicionadas aqui -->
+                    </div>
+                </div>
+                
+                <!-- Disponibilidade -->
+                <div class="form-section">
+                    <h2>📅 Disponibilidade</h2>
+                    <p style="color: #5a7184; margin-bottom: 1rem;">
+                        Marque os dias e horários em que você está disponível:
+                    </p>
+                    
+                    <div class="horarios-grid" id="horariosDisponibilidade">
+                        <!-- Será preenchido por JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Botões -->
+                <div class="btn-container">
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='dashboard.html'">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        💾 Salvar Perfil
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/localizacoes-portugal.js"></script>
+    <script src="assets/js/perfil-cuidador.js"></script>
+
