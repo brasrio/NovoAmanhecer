@@ -290,7 +290,7 @@ const handler = async (req, res) => {
                                     
                                     <p style="font-size: 16px; color: #333; margin-top: 25px;">Acesse agora e complete seu perfil:</p>
                                     
-                                    <a href="http://localhost:3000/login.html" style="display: inline-block; background: linear-gradient(135deg, #3674CC 0%, #52C4C1 100%); color: white; padding: 14px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; box-shadow: 0 4px 15px rgba(54, 116, 204, 0.3);">Fazer Login</a>
+                                    <a href="https://novo-amanhecer.vercel.app/login.html" style="display: inline-block; background: linear-gradient(135deg, #3674CC 0%, #52C4C1 100%); color: white; padding: 14px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; box-shadow: 0 4px 15px rgba(54, 116, 204, 0.3);">Fazer Login</a>
                                     
                                     <p style="margin-top: 30px; color: #999; font-size: 13px; border-top: 1px solid #eee; padding-top: 20px;">Se você não se cadastrou no Novo Amanhecer, ignore este email.</p>
                                 </div>
